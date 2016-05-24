@@ -102,6 +102,7 @@
 				TargetAttributes = {
 					2B2BFB8E1CF4FFFB0056E480 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = D6HFQ75KS5;
 					};
 				};
 			};
@@ -259,6 +260,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: James Dyer (HCHTMCMUC6)";
 				INFOPLIST_FILE = MechOne/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamesalandyer.MechOne;
@@ -270,6 +272,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: James Dyer (HCHTMCMUC6)";
 				INFOPLIST_FILE = MechOne/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamesalandyer.MechOne;
