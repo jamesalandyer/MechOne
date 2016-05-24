@@ -1,6 +1,6 @@
 //
 //  GameViewController.swift
-//  MechOne
+//  MechOne tvOS
 //
 //  Created by James Dyer on 5/24/16.
 //  Copyright (c) 2016 James Dyer. All rights reserved.
@@ -14,7 +14,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let scene = GameScene(fileNamed:"GameScene") {
+        if let scene = GameScene(fileNamed: "GameScene") {
             // Configure the view.
             let skView = self.view as! SKView
             skView.showsFPS = true
@@ -30,20 +30,8 @@ class GameViewController: UIViewController {
         }
     }
 
-    override func shouldAutorotate() -> Bool {
-        return true
-    }
-
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        return .Landscape
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
-    }
-
-    override func prefersStatusBarHidden() -> Bool {
-        return true
     }
 }

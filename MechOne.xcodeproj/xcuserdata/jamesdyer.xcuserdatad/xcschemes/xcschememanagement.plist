@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>MechOne OSX.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>MechOne tvOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>MechOne.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +23,16 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>2B2BFB8E1CF4FFFB0056E480</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2B2BFBAB1CF50C0D0056E480</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2B2BFBC01CF50C840056E480</key>
 		<dict>
 			<key>primary</key>
 			<true/>

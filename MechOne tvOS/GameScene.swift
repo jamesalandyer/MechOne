@@ -1,6 +1,6 @@
 //
 //  GameScene.swift
-//  MechOne
+//  MechOne tvOS
 //
 //  Created by James Dyer on 5/24/16.
 //  Copyright (c) 2016 James Dyer. All rights reserved.
@@ -13,14 +13,14 @@ class GameScene: SKScene {
         /* Setup your scene here */
         let myLabel = SKLabelNode(fontNamed:"Chalkduster")
         myLabel.text = "Hello, World!"
-        myLabel.fontSize = 45
+        myLabel.fontSize = 65
         myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
         
         self.addChild(myLabel)
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-       /* Called when a touch begins */
+        /* Called when a touch begins */
         
         for touch in touches {
             let location = touch.locationInNode(self)
