@@ -17,18 +17,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var skView: SKView!
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        /* Pick a size for the scene */
-        if let scene = GameScene(fileNamed:"GameScene") {
-            /* Set the scale mode to scale to fit the window */
-            scene.scaleMode = .AspectFill
-            
-            self.skView!.presentScene(scene)
-            
-            /* Sprite Kit applies additional optimizations to improve rendering performance */
-            self.skView!.ignoresSiblingOrder = true
-            
-            self.skView!.showsFPS = true
-            self.skView!.showsNodeCount = true
+        
+        let scene = GameScene(size: CGSize(width: 1024, height: 768))
+        
+        scene.scaleMode = .AspectFit
+        
+        _ = SKTResolution(screenSize: skView.bounds.size, canvasSize: scene.size)
+        
+        self.skView!.presentScene(scene)
+        
+        self.skView!.ignoresSiblingOrder = true
+        
+        
+        self.skView!.showsFPS = GameSettings.Debugging.ALL_ShowFrameRate
+        self.skView!.showsNodeCount = GameSettings.Debugging.ALL_ShowNodeCount
+        
+        
+        if (GameSettings.Defaults.OSX_Start_FullScreen) {
+            self.window.toggleFullScreen(nil)
         }
     }
     

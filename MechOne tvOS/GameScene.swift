@@ -8,38 +8,20 @@
 
 import SpriteKit
 
-class GameScene: SKScene {
+class GameScene: SKTScene {
     override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!"
-        myLabel.fontSize = 65
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
         
-        self.addChild(myLabel)
+        //This scene acts as the first point of contact to start background music and pass off to main menu
+        
+        //Start Background Music
+        SKTAudio.sharedInstance().playBackgroundMusic("background_music.mp3")
+        SKTAudio.sharedInstance().backgroundMusicPlayer?.volume = 0.4
+        
+        //Transition to Main Menu
+        let nextScene = MainMenu(size: self.scene!.size)
+        nextScene.scaleMode = self.scaleMode
+        self.view?.presentScene(nextScene)
+        
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        /* Called when a touch begins */
-        
-        for touch in touches {
-            let location = touch.locationInNode(self)
-            
-            let sprite = SKSpriteNode(imageNamed:"Spaceship")
-            
-            sprite.xScale = 0.5
-            sprite.yScale = 0.5
-            sprite.position = location
-            
-            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            
-            sprite.runAction(SKAction.repeatActionForever(action))
-            
-            self.addChild(sprite)
-        }
-    }
-   
-    override func update(currentTime: CFTimeInterval) {
-        /* Called before each frame is rendered */
-    }
 }

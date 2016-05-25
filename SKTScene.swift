@@ -24,4 +24,26 @@ class SKTScene: SKScene {
         //Overridden by Subclass
     }
     
+    func buttonEvent(event: String, velocity: Float, pushedOn: Bool) {
+        //Overridden by Subclass
+    }
+    
+    func stickEvent(event: String, point: CGPoint) {
+        //Overridden by Subclass
+    }
+    
+    //MARK: Camera functionality
+    
+    func centerCameraOnPoint(point: CGPoint) {
+        if let camera = camera {
+            camera.position = point
+        }
+    }
+    
+    //MARK: Localization
+    
+    func lt(text: String) -> String {
+        return NSLocalizedString(text, comment: "")
+    }
+    
 }
