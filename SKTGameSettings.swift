@@ -10,6 +10,23 @@ import Foundation
 import CoreGraphics
 import SpriteKit
 
+enum AnimationState: String {
+    case Dead = "Dead_"
+    case Jump = "Jump_"
+    case Run = "Run_"
+}
+
+enum ColliderType: UInt32 {
+    case Player        = 0
+    case Destroyable   = 0b1
+    case Wall          = 0b10
+    case Collectable   = 0b100
+    case EndLevel      = 0b1000
+    case Projectile    = 0b10000
+    case None          = 0b100000
+    case KillZone      = 0b1000000
+}
+
 struct GameSettings {
     
     /**
@@ -44,6 +61,22 @@ struct GameSettings {
         static let ALL_Introduce          : Bool = false
         
     }
-
+    
+    /**
+     Game standards in all modes.
+     */
+    
+    struct GameParams {
+        
+        struct zValues {
+            static let zBackground01:CGFloat = 10
+            static let zBackground02:CGFloat = 20
+            static let zBackground03:CGFloat = 30
+            static let zWorld:CGFloat = 100.0
+            static let zWorldFront:CGFloat = 150.0
+            static let zPlayer: CGFloat = 125.0
+        }
+        
+    }
     
 }

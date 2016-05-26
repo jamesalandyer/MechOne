@@ -6,5 +6,8 @@
   Copyright © 2016 James Dyer. All rights reserved.
 */
 
-"Language" = "English"
-"Mech One" = "Mech One"
+"Language" = "English";
+"Mech One" = "Mech One";
+"PLAY" = "PLAY";
+"BUILD" = "BUILD";
+"EXIT" = "EXIT";
