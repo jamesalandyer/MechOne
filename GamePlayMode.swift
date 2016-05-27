@@ -14,7 +14,6 @@ class GamePlayMode: SKTScene, SKPhysicsContactDelegate {
     //MARK: Instance Variables
     
     //Initial Data
-    var characterIndex = 0
     var levelIndex = 0
     
     //Level Data
@@ -214,7 +213,7 @@ class GamePlayMode: SKTScene, SKPhysicsContactDelegate {
         guard let camera = camera else { return }
         
         if let player = worldLayer.childNodeWithName("playerNode") as? EntityNode {
-            
+
             let zeroRange = SKRange(constantValue: 0.0)
             let playerNode = player
             let playerLocationConstraint = SKConstraint.distance(zeroRange, toNode: playerNode)

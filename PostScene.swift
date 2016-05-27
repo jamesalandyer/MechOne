@@ -13,7 +13,7 @@ class PostScreen: SKTScene {
     
     var level:Int?
     var win:Bool?
-    var gems:Int?
+    var diamonds:Int?
     
     override func didMoveToView(view: SKView) {
         
@@ -45,8 +45,8 @@ class PostScreen: SKTScene {
     func saveStats() {
         if win! {
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "Level_\(level!)")
-            if gems! > NSUserDefaults.standardUserDefaults().integerForKey("\(level!)gems") {
-                NSUserDefaults.standardUserDefaults().setInteger(gems!, forKey: "\(level!)gems")
+            if diamonds! > NSUserDefaults.standardUserDefaults().integerForKey("\(level!)diamonds") {
+                NSUserDefaults.standardUserDefaults().setInteger(diamonds!, forKey: "\(level!)diamonds")
             }
             NSUserDefaults.standardUserDefaults().synchronize()
         }

@@ -54,7 +54,6 @@ class GameSceneInitialState: GameSceneState {
         gs.addEntity(background04, toLayer:gs.backgroundLayer)
         
         //Add nodes for placeholders
-        let characters = ["Mech","Mech"]
         let atlas = SKTextureAtlas(named: "Mech")
         
         if let playerPlaceholder = gs.worldLayer.childNodeWithName("placeholder_StartPoint") {
@@ -89,7 +88,7 @@ class GameSceneInitialState: GameSceneState {
         gs.addEntity(killZone, toLayer: gs.worldLayer)
         
         //Setup UI
-        let pauseButton = SKLabelNode(fontNamed: "MarkerFelt-Wide")
+        let pauseButton = SKLabelNode(fontNamed: "Roboto-Bold")
         pauseButton.posByScreen(0.46, y: 0.42)
         pauseButton.fontSize = 40
         pauseButton.text = gs.lt("II")
@@ -135,7 +134,7 @@ class GameSceneWinState: GameSceneState {
         let nextScene = PostScreen(size: gs.scene!.size)
         nextScene.level = gs.levelIndex
         nextScene.win = true
-        nextScene.gems = gs.diamondsCollected
+        nextScene.diamonds = gs.diamondsCollected
         nextScene.scaleMode = gs.scaleMode
         gs.view?.presentScene(nextScene)
     }
@@ -145,7 +144,7 @@ class GameSceneLoseState: GameSceneState {
         let nextScene = PostScreen(size: gs.scene!.size)
         nextScene.level = gs.levelIndex
         nextScene.win = false
-        nextScene.gems = gs.diamondsCollected
+        nextScene.diamonds = gs.diamondsCollected
         nextScene.scaleMode = gs.scaleMode
         gs.view?.presentScene(nextScene)
     }

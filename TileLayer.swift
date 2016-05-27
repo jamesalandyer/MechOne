@@ -9,7 +9,7 @@
 import SpriteKit
 import GameplayKit
 
-let randomSceneryArt = ["crate", "Ladder", "Fence"]
+let randomSceneryArt = ["Ladder", "Fence"]
 let randomWallArt = ["sign_1", "sign_2", "sign_3", "sign_4", "sign_5"]
 
 class TileLayer: SKNode, tileMapDelegate {
@@ -317,7 +317,7 @@ class TileLayer: SKNode, tileMapDelegate {
             node.position = location
             node.zPosition = GameSettings.GameParams.zValues.zWorld
             
-            let physicsComponent = PhysicsComponent(entity: GKEntity(), bodySize: node.size, bodyShape: .square, rotation: false)
+            let physicsComponent = PhysicsComponent(entity: GKEntity(), bodySize: node.size, bodyShape: .circle, rotation: false)
             physicsComponent.setCategoryBitmask(ColliderType.Wall.rawValue, dynamic: false)
             physicsComponent.setPhysicsCollisions(ColliderType.Player.rawValue)
             node.physicsBody = physicsComponent.physicsBody
@@ -330,7 +330,7 @@ class TileLayer: SKNode, tileMapDelegate {
             node.position = location
             node.zPosition = GameSettings.GameParams.zValues.zWorld
             
-            let physicsComponent = PhysicsComponent(entity: GKEntity(), bodySize: node.size, bodyShape: .square, rotation: false)
+            let physicsComponent = PhysicsComponent(entity: GKEntity(), bodySize: node.size, bodyShape: .circle, rotation: false)
             physicsComponent.setCategoryBitmask(ColliderType.Wall.rawValue, dynamic: false)
             physicsComponent.setPhysicsCollisions(ColliderType.Player.rawValue)
             node.physicsBody = physicsComponent.physicsBody
@@ -343,7 +343,7 @@ class TileLayer: SKNode, tileMapDelegate {
             node.position = location
             node.zPosition = GameSettings.GameParams.zValues.zWorld
             
-            let physicsComponent = PhysicsComponent(entity: GKEntity(), bodySize: node.size, bodyShape: .square, rotation: false)
+            let physicsComponent = PhysicsComponent(entity: GKEntity(), bodySize: node.size, bodyShape: .circle, rotation: false)
             physicsComponent.setCategoryBitmask(ColliderType.Wall.rawValue, dynamic: false)
             physicsComponent.setPhysicsCollisions(ColliderType.Player.rawValue)
             node.physicsBody = physicsComponent.physicsBody
@@ -378,7 +378,7 @@ class TileLayer: SKNode, tileMapDelegate {
             addChild(node)
             break
         case .tilePounderShelf:
-            let node = SKSpriteNode(texture: atlasTiles.textureNamed("pounder_1"))
+            let node = SKSpriteNode(texture: atlasTiles.textureNamed("pound_1"))
             node.size = CGSize(width: 32, height: 32)
             node.position = location
             node.zPosition = GameSettings.GameParams.zValues.zWorld

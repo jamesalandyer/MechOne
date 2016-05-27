@@ -13,8 +13,6 @@ class LevelSelect: SKTScene {
     //Sounds
     let sndButtonClick = SKAction.playSoundFileNamed("click.wav", waitForCompletion: false)
     
-    var characterIndex = 0
-    
     let levelLayer = SKNode()
     
     override func didMoveToView(view: SKView) {
@@ -30,11 +28,8 @@ class LevelSelect: SKTScene {
         nameBlock.posByScreen(0.5, y: 0.9)
         nameBlock.fontColor = SKColor.whiteColor()
         nameBlock.fontSize = 54
-        nameBlock.text = "Select a Level:"
+        nameBlock.text = "SELECT A LEVEL:"
         addChild(nameBlock)
-        
-        //Next and previous page
-        
         
         //Show levels
         showLevelsFrom(0)
@@ -47,7 +42,7 @@ class LevelSelect: SKTScene {
             node.removeFromParent()
         }
         
-        let gridSize = CGSize(width: 3, height: 2)
+        let gridSize = CGSize(width: self.view!.frame.width, height: 2)
         let gridSpacing = CGSize(width: 160, height: -120)
         let gridStart = CGPoint(screenX: 0.1, screenY: 0.75)
         //var gridIndex = 0
@@ -60,7 +55,7 @@ class LevelSelect: SKTScene {
             
             var available:Bool
             
-            if !(index == 0) {
+            if index != 0 {
                 available = NSUserDefaults.standardUserDefaults().boolForKey("Level_\(index)")
             } else {
                 available = true
@@ -87,15 +82,15 @@ class LevelSelect: SKTScene {
             addChild(signText)
             
             let diamonds = NSUserDefaults.standardUserDefaults().integerForKey("\(index)diamonds") as Int
-            var index = 1
+            var i = 0
             
-            while diamonds > 0 {
+            while diamonds > i {
                 let diamond = SKSpriteNode(imageNamed: "diamond")
                 diamond.size = CGSize(width: 22, height: 22)
-                diamond.position = CGPoint(x: (-(sign.size.width / 3) + ((sign.size.width / 3) * CGFloat(index))) as CGFloat , y: -(sign.size.height / 2.5))
+                diamond.position = CGPoint(x: (-(sign.size.width / 3) + ((sign.size.width / 3) * CGFloat(i))) as CGFloat , y: -(sign.size.height / 2.5))
                 diamond.zPosition = 22
                 sign.addChild(diamond)
-                index = index + 1
+                i = i + 1
             }
             
             currentX = currentX + 1
@@ -115,13 +110,12 @@ class LevelSelect: SKTScene {
     
     override func screenInteractionStarted(location: CGPoint) {
         for node in nodesAtPoint(location) {
-            if let theNode:SKNode = node,
+            if let theNode: SKNode = node,
                 let nodeName = theNode.name {
                 if nodeName == "LevelSign" {
                     if theNode.userData!["Available"] as! Bool == true {
                         self.runAction(sndButtonClick)
                         let nextScene = GamePlayMode(size: self.scene!.size)
-                        nextScene.characterIndex = self.characterIndex
                         nextScene.levelIndex = (theNode.userData!["Index"] as? Int)!
                         nextScene.scaleMode = self.scaleMode
                         self.view?.presentScene(nextScene)
@@ -135,7 +129,6 @@ class LevelSelect: SKTScene {
     override func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
         self.runAction(sndButtonClick)
         let nextScene = GamePlayMode(size: self.scene!.size)
-        nextScene.characterIndex = self.characterIndex
         nextScene.levelIndex = 0
         nextScene.scaleMode = self.scaleMode
         self.view?.presentScene(nextScene)

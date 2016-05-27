@@ -31,7 +31,7 @@ class GameBuildMode: SKTScene {
         "0","1","2","3","4","5","6","7","8","9",
         "10","11","12","13","14","15","16","17",
         "18","19","20","21","Fence","sign_1","barrel","Door_1","Door_5","laser_1","laser_2","laser_3","laser_inactive_1","laser_inactive_2",
-        "mov_platform","pounder_1","pounder_2","saw","spike","switch_1","switch_2","Lamp","crate","diamond","s","f"
+        "mov_platform","pound_1","pounder_2","saw","spike","switch_1","switch_2","Lamp","crate","diamond","s","f"
     ]
     
     
