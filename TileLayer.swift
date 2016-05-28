@@ -408,6 +408,12 @@ class TileLayer: SKNode, tileMapDelegate {
             node.size = CGSize(width: 32, height: 32)
             node.position = location
             node.zPosition = GameSettings.GameParams.zValues.zWorld
+            
+            let physicsComponent = PhysicsComponent(entity: GKEntity(), bodySize: node.size, bodyShape: .circle, rotation: false)
+            physicsComponent.setCategoryBitmask(ColliderType.Wall.rawValue, dynamic: false)
+            physicsComponent.setPhysicsCollisions(ColliderType.Player.rawValue)
+            node.physicsBody = physicsComponent.physicsBody
+            
             addChild(node)
             break
         case .tileSpike:
@@ -415,6 +421,12 @@ class TileLayer: SKNode, tileMapDelegate {
             node.size = CGSize(width: 32, height: 32)
             node.position = location
             node.zPosition = GameSettings.GameParams.zValues.zWorld
+            
+            let physicsComponent = PhysicsComponent(entity: GKEntity(), bodySize: node.size, bodyShape: .circle, rotation: false)
+            physicsComponent.setCategoryBitmask(ColliderType.Wall.rawValue, dynamic: false)
+            physicsComponent.setPhysicsCollisions(ColliderType.Player.rawValue)
+            node.physicsBody = physicsComponent.physicsBody
+            
             addChild(node)
             break
         case .tileSwitchUnlocked:

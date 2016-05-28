@@ -42,7 +42,7 @@ class LevelSelect: SKTScene {
             node.removeFromParent()
         }
         
-        let gridSize = CGSize(width: self.view!.frame.width, height: 2)
+        let gridSize = CGSize(width: 5, height: 2)
         let gridSpacing = CGSize(width: 160, height: -120)
         let gridStart = CGPoint(screenX: 0.1, screenY: 0.75)
         //var gridIndex = 0
@@ -119,6 +119,7 @@ class LevelSelect: SKTScene {
                         nextScene.levelIndex = (theNode.userData!["Index"] as? Int)!
                         nextScene.scaleMode = self.scaleMode
                         self.view?.presentScene(nextScene)
+                        //TODO: Loading Screen
                     }
                 }
             }

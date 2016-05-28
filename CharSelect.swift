@@ -9,7 +9,7 @@
 import SpriteKit
 
 class CharSelect: SKTScene {
-    
+    //TODO: Story Intro
     //Sounds
     let sndButtonClick = SKAction.playSoundFileNamed("click.wav", waitForCompletion: false)
     
@@ -30,6 +30,12 @@ class CharSelect: SKTScene {
         addChild(nameBlock)
         
     }
+    
+    /*
+     Story: You overheard the Mechs plotting to attempt to overtake earth. You believe that this is not right and want to stop them. So you destroy the ships engine and attack system, now all you need to do is escape the ship before the engine
+     explodes into a fiery inferno. Be careful, if you don't escape fast enough you will be destroyed by this fiery inferno. By the way, also take note that the suit you are in is a brand new state of the art prototype suit. It is still in testing
+     so make sure to account for that. If you don't escape, you can't warn your friends on earth to prepare for an attack. Tap to continue.
+    */
     
     override func screenInteractionStarted(location: CGPoint) {
         self.runAction(sndButtonClick)
