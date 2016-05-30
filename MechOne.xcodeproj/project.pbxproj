@@ -121,9 +121,9 @@
 		2B2BFC6D1CF64D730056E480 /* TileLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2BFC6C1CF64D730056E480 /* TileLayer.swift */; };
 		2B2BFC6E1CF64D730056E480 /* TileLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2BFC6C1CF64D730056E480 /* TileLayer.swift */; };
 		2B2BFC6F1CF64D730056E480 /* TileLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2BFC6C1CF64D730056E480 /* TileLayer.swift */; };
-		2B2BFC711CF64DC60056E480 /* CharSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2BFC701CF64DC60056E480 /* CharSelect.swift */; };
-		2B2BFC721CF64DC60056E480 /* CharSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2BFC701CF64DC60056E480 /* CharSelect.swift */; };
-		2B2BFC731CF64DC60056E480 /* CharSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2BFC701CF64DC60056E480 /* CharSelect.swift */; };
+		2B2BFC711CF64DC60056E480 /* GameIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2BFC701CF64DC60056E480 /* GameIntro.swift */; };
+		2B2BFC721CF64DC60056E480 /* GameIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2BFC701CF64DC60056E480 /* GameIntro.swift */; };
+		2B2BFC731CF64DC60056E480 /* GameIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2BFC701CF64DC60056E480 /* GameIntro.swift */; };
 		2B2BFC751CF64DFA0056E480 /* LevelSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2BFC741CF64DFA0056E480 /* LevelSelect.swift */; };
 		2B2BFC761CF64DFA0056E480 /* LevelSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2BFC741CF64DFA0056E480 /* LevelSelect.swift */; };
 		2B2BFC771CF64DFA0056E480 /* LevelSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2BFC741CF64DFA0056E480 /* LevelSelect.swift */; };
@@ -232,7 +232,7 @@
 		2B2BFC631CF639850056E480 /* GamePlayMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePlayMode.swift; sourceTree = "<group>"; };
 		2B2BFC671CF63AF60056E480 /* PlayModeStates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayModeStates.swift; sourceTree = "<group>"; };
 		2B2BFC6C1CF64D730056E480 /* TileLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileLayer.swift; sourceTree = "<group>"; };
-		2B2BFC701CF64DC60056E480 /* CharSelect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharSelect.swift; sourceTree = "<group>"; };
+		2B2BFC701CF64DC60056E480 /* GameIntro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameIntro.swift; sourceTree = "<group>"; };
 		2B2BFC741CF64DFA0056E480 /* LevelSelect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelSelect.swift; sourceTree = "<group>"; };
 		2B2BFC781CF64E2A0056E480 /* GameBuildMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBuildMode.swift; sourceTree = "<group>"; };
 		2B2BFC7C1CF64E900056E480 /* PostScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostScene.swift; sourceTree = "<group>"; };
@@ -358,7 +358,7 @@
 				2B2BFC5F1CF62F7C0056E480 /* MainMenu.swift */,
 				2B2BFBC71CF50C840056E480 /* GameScene.swift */,
 				2B2BFC631CF639850056E480 /* GamePlayMode.swift */,
-				2B2BFC701CF64DC60056E480 /* CharSelect.swift */,
+				2B2BFC701CF64DC60056E480 /* GameIntro.swift */,
 				2B2BFC741CF64DFA0056E480 /* LevelSelect.swift */,
 				2B2BFC781CF64E2A0056E480 /* GameBuildMode.swift */,
 				2B2BFC7C1CF64E900056E480 /* PostScene.swift */,
@@ -692,7 +692,7 @@
 				2B2BFC2C1CF517DB0056E480 /* SKTGameSettings.swift in Sources */,
 				2B2BFC991CF650010056E480 /* SKTEntity.swift in Sources */,
 				2B2BFBF51CF50E0F0056E480 /* CGPoint+Extensions.swift in Sources */,
-				2B2BFC711CF64DC60056E480 /* CharSelect.swift in Sources */,
+				2B2BFC711CF64DC60056E480 /* GameIntro.swift in Sources */,
 				2B2BFCA11CF650710056E480 /* PlayerEntity.swift in Sources */,
 				2B2BFC101CF50E0F0056E480 /* SKTTimingFunctions.swift in Sources */,
 				2B2BFC0D1CF50E0F0056E480 /* SKTEffects.swift in Sources */,
@@ -769,7 +769,7 @@
 				2B2BFCB21CF652030056E480 /* TileMapLevels.swift in Sources */,
 				2B2BFC861CF64EFB0056E480 /* AnimationComponent.swift in Sources */,
 				2B2BFC9A1CF650010056E480 /* SKTEntity.swift in Sources */,
-				2B2BFC721CF64DC60056E480 /* CharSelect.swift in Sources */,
+				2B2BFC721CF64DC60056E480 /* GameIntro.swift in Sources */,
 				2B2BFC111CF50E0F0056E480 /* SKTTimingFunctions.swift in Sources */,
 				2B2BFC6E1CF64D730056E480 /* TileLayer.swift in Sources */,
 				2B2BFC081CF50E0F0056E480 /* SKNode+Extensions.swift in Sources */,
@@ -817,7 +817,7 @@
 				2B2BFCB31CF652030056E480 /* TileMapLevels.swift in Sources */,
 				2B2BFC871CF64EFB0056E480 /* AnimationComponent.swift in Sources */,
 				2B2BFC9B1CF650010056E480 /* SKTEntity.swift in Sources */,
-				2B2BFC731CF64DC60056E480 /* CharSelect.swift in Sources */,
+				2B2BFC731CF64DC60056E480 /* GameIntro.swift in Sources */,
 				2B2BFC0C1CF50E0F0056E480 /* SKTAudio.swift in Sources */,
 				2B2BFC6F1CF64D730056E480 /* TileLayer.swift in Sources */,
 				2B2BFBF41CF50E0F0056E480 /* CGFloat+Extensions.swift in Sources */,

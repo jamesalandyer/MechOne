@@ -13,7 +13,6 @@ struct ControlScheme {
     
     //Input
     var jumpPressed:Bool = false
-    var throwPressed:Bool = false
     
 }
 
@@ -35,7 +34,6 @@ class SideScrollComponent: GKComponent {
     //State
     var isJumping = false
     var jumpTime:CGFloat = 0.0
-    var isThrowing = false
     
     var spriteComponent: SpriteComponent {
         guard let spriteComponent = entity?.componentForClass(SpriteComponent.self) else { fatalError("SpriteComponent Missing") }

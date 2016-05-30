@@ -35,15 +35,15 @@ struct GameSettings {
     
     struct Debugging {
         
-        static let ALL_ShowFrameRate: Bool = true
-        static let ALL_ShowNodeCount: Bool = true
+        static let ALL_ShowFrameRate: Bool = false
+        static let ALL_ShowNodeCount: Bool = false
         
         static let IOS_ShowDrawCount: Bool = false
         static let IOS_ShowQuadCount: Bool = false
         static let IOS_ShowPhysics  : Bool = false
         static let IOS_ShowFields   : Bool = false
         
-        static let ALL_TellMeStatus : Bool = true
+        static let ALL_TellMeStatus : Bool = false
     }
     
     /**

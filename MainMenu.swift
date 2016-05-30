@@ -35,8 +35,7 @@ class MainMenu: SKTScene {
         playButton.name = "playGame"
         addChild(playButton)
         
-        //For debugging
-        
+        /*
         let buildButton = SKLabelNode(fontNamed: "Roboto-Bold")
         buildButton.posByScreen(0.5, y: 0.2)
         buildButton.fontSize = 56
@@ -45,6 +44,7 @@ class MainMenu: SKTScene {
         buildButton.zPosition = 10
         buildButton.name = "buildGame"
         addChild(buildButton)
+        */
         
         let title = SKSpriteNode(imageNamed: "MECHONE01")
         title.posByCanvas(-1.5, y: 0.7)
@@ -59,7 +59,7 @@ class MainMenu: SKTScene {
         
         #if os(OSX)
             let exitButton = SKLabelNode(fontNamed: "Roboto-Bold")
-            exitButton.posByScreen(0.5, y: 0.1)
+            exitButton.posByScreen(0.5, y: 0.2)
             exitButton.fontSize = 56
             exitButton.text = lt("EXIT")
             exitButton.fontColor = SKColor.whiteColor()
@@ -81,10 +81,12 @@ class MainMenu: SKTScene {
                     buttonEvent("buttonA", velocity: 1.0, pushedOn: true)
                 }
                 
+                /*
                 if node.name == "buildGame" {
                     buttonEvent("buttonB", velocity: 1.0, pushedOn: true)
                 }
-                
+                */
+ 
                 #if os(OSX)
                     if node.name == "exitGame" {
                         self.runAction(sndButtonClick)
@@ -102,11 +104,12 @@ class MainMenu: SKTScene {
             
             self.runAction(sndButtonClick)
             
-            let nextScene = CharSelect(size: self.scene!.size)
+            let nextScene = GameIntro(size: self.scene!.size)
             nextScene.scaleMode = self.scaleMode
             self.view?.presentScene(nextScene)
             
         }
+        /*
         if event == "buttonB" {
             
             self.runAction(sndButtonClick)
@@ -116,7 +119,7 @@ class MainMenu: SKTScene {
             self.view?.presentScene(nextScene)
             
         }
-        
+        */
     }
     
     override func stickEvent(event:String,point:CGPoint) {
@@ -125,11 +128,10 @@ class MainMenu: SKTScene {
     
     #if !os(OSX)
     override func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
-    self.runAction(sndButtonClick)
-    
-    let nextScene = CharSelect(size: self.scene!.size)
-    nextScene.scaleMode = self.scaleMode
-    self.view?.presentScene(nextScene)
+        self.runAction(sndButtonClick)
+        let nextScene = GameIntro(size: self.scene!.size)
+        nextScene.scaleMode = self.scaleMode
+        self.view?.presentScene(nextScene)
     }
     #endif
 }

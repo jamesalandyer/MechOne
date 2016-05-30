@@ -123,8 +123,10 @@ class GamePlayMode: SKTScene, SKPhysicsContactDelegate {
         if let node = nodeAtPoint(location) as? SKLabelNode {
             if node.name == "PauseButton" {
                 if pauseLoop {
+                    node.text = lt("II")
                     stateMachine.enterState(GameSceneActiveState.self)
                 } else {
+                    node.text = lt(">")
                     stateMachine.enterState(GameScenePausedState.self)
                 }
                 return

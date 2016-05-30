@@ -15,6 +15,7 @@ class ChaseScrollComponent: GKComponent {
     
     var spriteComponent: SpriteComponent {
         guard let spriteComponent = entity?.componentForClass(SpriteComponent.self) else { fatalError("SpriteComponent Missing") }
+        spriteComponent.node.alpha = 0.0
         return spriteComponent
     }
     

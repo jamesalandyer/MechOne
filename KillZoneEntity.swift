@@ -15,7 +15,7 @@ class KillZoneEntity: SKTEntity {
     var physicsComponent: PhysicsComponent!
     var scrollerComponent: ChaseScrollComponent!
     
-    init(position: CGPoint, size: CGSize, texture:SKTexture) {
+    init(position: CGPoint, size: CGSize, texture: SKTexture) {
         super.init()
         
         //Initialize components
