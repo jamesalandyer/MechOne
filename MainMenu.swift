@@ -15,7 +15,6 @@ class MainMenu: SKTScene {
     
     //Sounds
     let sndTitleSlide = SKAction.playSoundFileNamed("title.wav", waitForCompletion: false)
-    let sndButtonClick = SKAction.playSoundFileNamed("click.wav", waitForCompletion: false)
     
     override func didMoveToView(view: SKView) {
         
@@ -35,6 +34,7 @@ class MainMenu: SKTScene {
         playButton.name = "playGame"
         addChild(playButton)
         
+        //Build
         /*
         let buildButton = SKLabelNode(fontNamed: "Roboto-Bold")
         buildButton.posByScreen(0.5, y: 0.2)
@@ -52,10 +52,7 @@ class MainMenu: SKTScene {
         title.yScale = 0.7
         title.zPosition = 15
         addChild(title)
-        title.runAction(SKAction.group([
-            SKAction.moveTo(CGPoint(screenX: 0.5, screenY: 0.7), duration: 1.0),
-            sndTitleSlide
-            ]))
+        title.runAction(SKAction.group([ SKAction.moveTo(CGPoint(screenX: 0.5, screenY: 0.7), duration: 1.0), sndTitleSlide]))
         
         #if os(OSX)
             let exitButton = SKLabelNode(fontNamed: "Roboto-Bold")
@@ -89,7 +86,7 @@ class MainMenu: SKTScene {
  
                 #if os(OSX)
                     if node.name == "exitGame" {
-                        self.runAction(sndButtonClick)
+                        SKTAudio.sharedInstance().playSoundEffect("button_click.wav")
                         NSApplication.sharedApplication().terminate(self)
                     }
                 #endif
@@ -102,7 +99,7 @@ class MainMenu: SKTScene {
     override func buttonEvent(event:String,velocity:Float,pushedOn:Bool) {
         if event == "buttonA" {
             
-            self.runAction(sndButtonClick)
+            SKTAudio.sharedInstance().playSoundEffect("button_click.wav")
             
             let nextScene = GameIntro(size: self.scene!.size)
             nextScene.scaleMode = self.scaleMode
@@ -128,7 +125,7 @@ class MainMenu: SKTScene {
     
     #if !os(OSX)
     override func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
-        self.runAction(sndButtonClick)
+        SKTAudio.sharedInstance().playSoundEffect("button_click.wav")
         let nextScene = GameIntro(size: self.scene!.size)
         nextScene.scaleMode = self.scaleMode
         self.view?.presentScene(nextScene)

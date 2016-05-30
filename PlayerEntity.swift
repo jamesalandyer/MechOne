@@ -16,7 +16,7 @@ class PlayerEntity: SKTEntity {
     var physicsComponent: PhysicsComponent!
     var scrollerComponent: SideScrollComponent!
     
-    var gameScene:GamePlayMode!
+    var gameScene: GamePlayMode!
     
     init(position: CGPoint, size: CGSize, firstFrame:SKTexture, atlas: SKTextureAtlas, scene:GamePlayMode) {
         super.init()

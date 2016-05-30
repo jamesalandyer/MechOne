@@ -11,7 +11,8 @@ import SpriteKit
 
 class PostScreen: SKTScene {
     
-    let sndButtonClick = SKAction.playSoundFileNamed("click.wav", waitForCompletion: false)
+    let sndPass = SKAction.playSoundFileNamed("pass.wav", waitForCompletion: false)
+    let sndDied = SKAction.playSoundFileNamed("died.wav", waitForCompletion: false)
     
     var level:Int?
     var win:Bool?
@@ -45,6 +46,14 @@ class PostScreen: SKTScene {
         background.yScale = 1.2
         background.zPosition = -1
         addChild(background)
+        
+        if win != nil {
+            if win! {
+                background.runAction(sndPass)
+            } else {
+                background.runAction(sndDied)
+            }
+        }
         
         let nameBlock = SKLabelNode(fontNamed: "Roboto-Bold")
         nameBlock.posByScreen(0.5, y: 0.75)
@@ -108,7 +117,7 @@ class PostScreen: SKTScene {
                 if nodeName == "RETRY" {
                     if win != nil && gameWon == false {
                         if let level = level {
-                            self.runAction(sndButtonClick)
+                            SKTAudio.sharedInstance().playSoundEffect("button_click.wav")
                             let nextScene = GamePlayMode(size: self.scene!.size)
                             nextScene.levelIndex = win! ? level + 1 : level
                             nextScene.scaleMode = self.scaleMode
@@ -117,6 +126,7 @@ class PostScreen: SKTScene {
                     }
                 }
                 if nodeName == "HOME" {
+                    SKTAudio.sharedInstance().playSoundEffect("button_click.wav")
                     let nextScene = MainMenu(size: self.scene!.size)
                     nextScene.scaleMode = self.scaleMode
                     self.view?.presentScene(nextScene)
@@ -131,7 +141,7 @@ class PostScreen: SKTScene {
             case .UpArrow:
                 if win != nil && gameWon == false {
                     if let level = level {
-                        self.runAction(sndButtonClick)
+                        SKTAudio.sharedInstance().playSoundEffect("button_click.wav")
                         let nextScene = GamePlayMode(size: self.scene!.size)
                         nextScene.levelIndex = win! ? level + 1 : level
                         nextScene.scaleMode = self.scaleMode
@@ -139,6 +149,7 @@ class PostScreen: SKTScene {
                     }
                 }
             case .DownArrow:
+                SKTAudio.sharedInstance().playSoundEffect("button_click.wav")
                 let nextScene = MainMenu(size: self.scene!.size)
                 nextScene.scaleMode = self.scaleMode
                 self.view?.presentScene(nextScene)

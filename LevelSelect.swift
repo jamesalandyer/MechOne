@@ -10,9 +10,6 @@ import SpriteKit
 
 class LevelSelect: SKTScene {
     
-    //Sounds
-    let sndButtonClick = SKAction.playSoundFileNamed("click.wav", waitForCompletion: false)
-    
     let levelLayer = SKNode()
     
     override func didMoveToView(view: SKView) {
@@ -114,12 +111,11 @@ class LevelSelect: SKTScene {
                 let nodeName = theNode.name {
                 if nodeName == "LevelSign" {
                     if theNode.userData!["Available"] as! Bool == true {
-                        self.runAction(sndButtonClick)
+                        SKTAudio.sharedInstance().playSoundEffect("button_click.wav")
                         let nextScene = GamePlayMode(size: self.scene!.size)
                         nextScene.levelIndex = (theNode.userData!["Index"] as? Int)!
                         nextScene.scaleMode = self.scaleMode
                         self.view?.presentScene(nextScene)
-                        //TODO: Loading Screen
                     }
                 }
             }
@@ -128,7 +124,7 @@ class LevelSelect: SKTScene {
     
     #if !os(OSX)
     override func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
-        self.runAction(sndButtonClick)
+        SKTAudio.sharedInstance().playSoundEffect("button_click.wav")
         let nextScene = GamePlayMode(size: self.scene!.size)
         nextScene.levelIndex = 0
         nextScene.scaleMode = self.scaleMode

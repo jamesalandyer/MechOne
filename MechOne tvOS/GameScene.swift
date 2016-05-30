@@ -15,7 +15,7 @@ class GameScene: SKTScene {
         
         //Start Background Music
         SKTAudio.sharedInstance().playBackgroundMusic("background_music.mp3")
-        SKTAudio.sharedInstance().backgroundMusicPlayer?.volume = 0.0
+        SKTAudio.sharedInstance().backgroundMusicPlayer?.volume = 0.3
         //TODO: CHANGE!
         
         //Transition to Main Menu
