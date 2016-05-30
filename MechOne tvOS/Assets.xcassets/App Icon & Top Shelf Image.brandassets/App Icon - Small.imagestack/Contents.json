@@ -1,13 +1,19 @@
 {
   "layers" : [
     {
-      "filename" : "Front.imagestacklayer"
+      "filename" : "Mech.imagestacklayer"
     },
     {
-      "filename" : "Middle.imagestacklayer"
+      "filename" : "Scenery.imagestacklayer"
     },
     {
-      "filename" : "Back.imagestacklayer"
+      "filename" : "Explosion.imagestacklayer"
+    },
+    {
+      "filename" : "Ground.imagestacklayer"
+    },
+    {
+      "filename" : "Background.imagestacklayer"
     }
   ],
   "info" : {
