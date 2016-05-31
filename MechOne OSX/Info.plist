@@ -34,5 +34,7 @@
 	<array>
 		<string>Roboto-Bold.ttf</string>
 	</array>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.adventure-games</string>
 </dict>
 </plist>
