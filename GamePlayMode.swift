@@ -156,6 +156,7 @@ class GamePlayMode: SKTScene, SKPhysicsContactDelegate {
     override func stickEvent(event:String,point:CGPoint) {
         
     }
+    
     #if !os(OSX)
     override func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
         for press in presses {

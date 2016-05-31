@@ -59,7 +59,7 @@ class PostScreen: SKTScene {
         nameBlock.posByScreen(0.5, y: 0.75)
         nameBlock.fontColor = SKColor.whiteColor()
         nameBlock.fontSize = 32
-        if (win != nil) {
+        if win != nil {
             if gameWon {
                     nameBlock.text = "YOU ESCAPED THE BASE!"
             } else {
@@ -72,7 +72,7 @@ class PostScreen: SKTScene {
         retryBlock.posByScreen(0.5, y: 0.5)
         retryBlock.fontColor = SKColor.whiteColor()
         retryBlock.fontSize = 64
-        if (win != nil) {
+        if win != nil {
             if gameWon {
                 retryBlock.posByScreen(0.5, y: 0.55)
                 retryBlock.fontSize = 40
@@ -138,7 +138,7 @@ class PostScreen: SKTScene {
     override func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
         for press in presses {
             switch press.type {
-            case .UpArrow:
+            case .Select:
                 if win != nil && gameWon == false {
                     if let level = level {
                         SKTAudio.sharedInstance().playSoundEffect("button_click.wav")
@@ -148,7 +148,7 @@ class PostScreen: SKTScene {
                         self.view?.presentScene(nextScene)
                     }
                 }
-            case .DownArrow:
+            case .Menu:
                 SKTAudio.sharedInstance().playSoundEffect("button_click.wav")
                 let nextScene = MainMenu(size: self.scene!.size)
                 nextScene.scaleMode = self.scaleMode

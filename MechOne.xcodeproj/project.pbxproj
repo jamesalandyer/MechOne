@@ -75,9 +75,6 @@
 		2B2BFC301CF527240056E480 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B2BFC2F1CF527240056E480 /* Localizable.strings */; };
 		2B2BFC311CF527240056E480 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B2BFC2F1CF527240056E480 /* Localizable.strings */; };
 		2B2BFC321CF527240056E480 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B2BFC2F1CF527240056E480 /* Localizable.strings */; };
-		2B2BFC341CF528250056E480 /* background_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B2BFC331CF528250056E480 /* background_music.mp3 */; };
-		2B2BFC351CF528250056E480 /* background_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B2BFC331CF528250056E480 /* background_music.mp3 */; };
-		2B2BFC361CF528250056E480 /* background_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B2BFC331CF528250056E480 /* background_music.mp3 */; };
 		2B2BFC381CF52A110056E480 /* jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B2BFC371CF52A110056E480 /* jump.wav */; };
 		2B2BFC391CF52A110056E480 /* jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B2BFC371CF52A110056E480 /* jump.wav */; };
 		2B2BFC3A1CF52A110056E480 /* jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B2BFC371CF52A110056E480 /* jump.wav */; };
@@ -174,6 +171,9 @@
 		2B2BFCB51CF652130056E480 /* TileMapBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2BFCB41CF652130056E480 /* TileMapBuilder.swift */; };
 		2B2BFCB61CF652130056E480 /* TileMapBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2BFCB41CF652130056E480 /* TileMapBuilder.swift */; };
 		2B2BFCB71CF652130056E480 /* TileMapBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2BFCB41CF652130056E480 /* TileMapBuilder.swift */; };
+		2B2BFCB91CFCC4C50056E480 /* IntenseCinematic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B2BFCB81CFCC4C40056E480 /* IntenseCinematic.mp3 */; };
+		2B2BFCBA1CFCC4C50056E480 /* IntenseCinematic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B2BFCB81CFCC4C40056E480 /* IntenseCinematic.mp3 */; };
+		2B2BFCBB1CFCC4C50056E480 /* IntenseCinematic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B2BFCB81CFCC4C40056E480 /* IntenseCinematic.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -215,7 +215,6 @@
 		2B2BFC271CF516200056E480 /* SKTResolution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTResolution.swift; sourceTree = "<group>"; };
 		2B2BFC2B1CF517DB0056E480 /* SKTGameSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTGameSettings.swift; sourceTree = "<group>"; };
 		2B2BFC2F1CF527240056E480 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		2B2BFC331CF528250056E480 /* background_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background_music.mp3; sourceTree = "<group>"; };
 		2B2BFC371CF52A110056E480 /* jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jump.wav; sourceTree = "<group>"; };
 		2B2BFC3B1CF52A770056E480 /* died.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = died.wav; sourceTree = "<group>"; };
 		2B2BFC3F1CF52B300056E480 /* pass.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pass.wav; sourceTree = "<group>"; };
@@ -248,6 +247,7 @@
 		2B2BFCAC1CF651810056E480 /* KillZoneEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KillZoneEntity.swift; sourceTree = "<group>"; };
 		2B2BFCB01CF652030056E480 /* TileMapLevels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileMapLevels.swift; sourceTree = "<group>"; };
 		2B2BFCB41CF652130056E480 /* TileMapBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileMapBuilder.swift; sourceTree = "<group>"; };
+		2B2BFCB81CFCC4C40056E480 /* IntenseCinematic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IntenseCinematic.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -430,7 +430,7 @@
 		2B2BFBE21CF50D880056E480 /* Music */ = {
 			isa = PBXGroup;
 			children = (
-				2B2BFC331CF528250056E480 /* background_music.mp3 */,
+				2B2BFCB81CFCC4C40056E480 /* IntenseCinematic.mp3 */,
 			);
 			name = Music;
 			sourceTree = "<group>";
@@ -617,10 +617,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B2BFC381CF52A110056E480 /* jump.wav in Resources */,
-				2B2BFC341CF528250056E480 /* background_music.mp3 in Resources */,
 				2B2BFC541CF62DEB0056E480 /* button_click.wav in Resources */,
 				2B2BFC481CF626A90056E480 /* Roboto-Bold.ttf in Resources */,
 				2B2BFBA11CF4FFFB0056E480 /* LaunchScreen.storyboard in Resources */,
+				2B2BFCB91CFCC4C50056E480 /* IntenseCinematic.mp3 in Resources */,
 				2B2BFC301CF527240056E480 /* Localizable.strings in Resources */,
 				2B2BFC401CF52B300056E480 /* pass.wav in Resources */,
 				2B2BFB9E1CF4FFFB0056E480 /* Assets.xcassets in Resources */,
@@ -644,7 +644,7 @@
 				2B2BFC391CF52A110056E480 /* jump.wav in Resources */,
 				2B2BFC4D1CF62D340056E480 /* LargeMedia.xcassets in Resources */,
 				2B2BFC551CF62DEB0056E480 /* button_click.wav in Resources */,
-				2B2BFC351CF528250056E480 /* background_music.mp3 in Resources */,
+				2B2BFCBA1CFCC4C50056E480 /* IntenseCinematic.mp3 in Resources */,
 				2B2BFC5D1CF62E780056E480 /* diamond.wav in Resources */,
 				2B2BFC591CF62E340056E480 /* title.wav in Resources */,
 				2B2BFC511CF62D4B0056E480 /* Tiles.atlas in Resources */,
@@ -660,11 +660,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B2BFC3A1CF52A110056E480 /* jump.wav in Resources */,
-				2B2BFC361CF528250056E480 /* background_music.mp3 in Resources */,
 				2B2BFC561CF62DEB0056E480 /* button_click.wav in Resources */,
 				2B2BFC4A1CF626A90056E480 /* Roboto-Bold.ttf in Resources */,
 				2B2BFBCF1CF50C840056E480 /* Main.storyboard in Resources */,
 				2B2BFC321CF527240056E480 /* Localizable.strings in Resources */,
+				2B2BFCBB1CFCC4C50056E480 /* IntenseCinematic.mp3 in Resources */,
 				2B2BFC421CF52B300056E480 /* pass.wav in Resources */,
 				2B2BFBD11CF50C840056E480 /* Assets.xcassets in Resources */,
 				2B2BFC461CF52CA30056E480 /* Mech.atlas in Resources */,

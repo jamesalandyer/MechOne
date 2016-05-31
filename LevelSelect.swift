@@ -28,7 +28,6 @@ class LevelSelect: SKTScene {
         nameBlock.text = "SELECT A LEVEL:"
         addChild(nameBlock)
         
-        //Show levels
         showLevelsFrom(0)
         
     }
@@ -42,7 +41,6 @@ class LevelSelect: SKTScene {
         let gridSize = CGSize(width: 5, height: 2)
         let gridSpacing = CGSize(width: 160, height: -120)
         let gridStart = CGPoint(screenX: 0.1, screenY: 0.75)
-        //var gridIndex = 0
         
         var currentX = 0
         var currentY = 0

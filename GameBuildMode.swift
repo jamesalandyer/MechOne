@@ -28,10 +28,9 @@ class GameBuildMode: SKTScene {
     
     //Tiles
     static let tileImages = [
-        "0","1","2","3","4","5","6","7","8","9",
-        "10","11","12","13","14","15","16","17",
-        "18","19","20","21","Fence","sign_1","barrel","Door_1","Door_5","laser_1","laser_2","laser_3","laser_inactive_1","laser_inactive_2",
-        "mov_platform","pound_1","pounder_2","saw","spike","switch_1","switch_2","Lamp","crate","diamond","s","f"
+        "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17",
+        "18", "19", "20", "21", "Fence", "sign_1", "barrel", "Door_1", "Door_5", "laser_1", "laser_2", "laser_3", "laser_inactive_1", "laser_inactive_2",
+        "mov_platform", "pound_1", "pounder_2", "saw", "spike", "switch_1", "switch_2", "Lamp", "crate", "diamond", "s", "f"
     ]
     
     
@@ -178,7 +177,6 @@ class GameBuildMode: SKTScene {
         case .toolMove:
             if let camera = camera {
                 camera.runAction(SKAction.moveTo(location, duration: 0.2))
-                //print("x: \(floor(abs(location.x/32.0))) y: \(floor(abs(location.y/32.0)))")
             }
             break
         case .toolAdd:

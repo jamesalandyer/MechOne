@@ -44,9 +44,8 @@ class GameViewController: UIViewController {
             skView.scene!.pressesBegan(presses, withEvent: event)
         }
     }
-    override func pressesEnded(presses: Set<UIPress>, withEvent event:
-        UIPressesEvent?) {
-        if (skView.scene != nil) {
+    override func pressesEnded(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
+        if skView.scene != nil {
             skView.scene!.pressesEnded(presses, withEvent: event)
         }
     }
