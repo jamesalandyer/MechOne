@@ -157,6 +157,30 @@ class GamePlayMode: SKTScene, SKPhysicsContactDelegate {
         
     }
     
+    #if os(OSX)
+    override func handleKeyEvent(event: NSEvent, keyDown: Bool) {
+        if let characters = event.characters {
+            for character in characters.characters {
+                switch character {
+                case " ":
+                    control.jumpPressed = keyDown
+                    break
+                case "p" where keyDown:
+                    if pauseLoop {
+                        stateMachine.enterState(GameSceneActiveState.self)
+                    } else {
+                        stateMachine.enterState(GameScenePausedState.self)
+                    }
+                    break
+                default:
+                    break
+                }
+            }
+        }
+    }
+    
+    #endif
+    
     #if !os(OSX)
     override func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
         for press in presses {

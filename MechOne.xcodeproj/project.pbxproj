@@ -184,12 +184,12 @@
 		2B2BFB9D1CF4FFFB0056E480 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B2BFBA01CF4FFFB0056E480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B2BFBA21CF4FFFB0056E480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2B2BFBAC1CF50C0D0056E480 /* MechOne OSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MechOne OSX.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B2BFBAC1CF50C0D0056E480 /* MechOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MechOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B2BFBAE1CF50C0D0056E480 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B2BFBB41CF50C0D0056E480 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B2BFBB71CF50C0D0056E480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		2B2BFBB91CF50C0D0056E480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2B2BFBC11CF50C840056E480 /* MechOne tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MechOne tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B2BFBC11CF50C840056E480 /* MechOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MechOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B2BFBC31CF50C840056E480 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B2BFBC71CF50C840056E480 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = "MechOne tvOS/GameScene.swift"; sourceTree = "<group>"; };
 		2B2BFBC91CF50C840056E480 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -248,7 +248,7 @@
 		2B2BFCB01CF652030056E480 /* TileMapLevels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileMapLevels.swift; sourceTree = "<group>"; };
 		2B2BFCB41CF652130056E480 /* TileMapBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileMapBuilder.swift; sourceTree = "<group>"; };
 		2B2BFCB81CFCC4C40056E480 /* IntenseCinematic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IntenseCinematic.mp3; sourceTree = "<group>"; };
-		2B2BFCBC1CFE51320056E480 /* MechOne OSX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "MechOne OSX.entitlements"; path = "MechOne OSX/MechOne OSX.entitlements"; sourceTree = "<group>"; };
+		2B827AD61D00177400908CFB /* MechOne.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = MechOne.entitlements; path = "MechOne OSX/MechOne.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,7 +279,7 @@
 		2B2BFB861CF4FFFB0056E480 = {
 			isa = PBXGroup;
 			children = (
-				2B2BFCBC1CFE51320056E480 /* MechOne OSX.entitlements */,
+				2B827AD61D00177400908CFB /* MechOne.entitlements */,
 				2B2BFBD61CF50C920056E480 /* Shared Game */,
 				2B2BFB911CF4FFFB0056E480 /* iOS Controller */,
 				2B2BFBAD1CF50C0D0056E480 /* OSX Controller */,
@@ -292,8 +292,8 @@
 			isa = PBXGroup;
 			children = (
 				2B2BFB8F1CF4FFFB0056E480 /* MechOne.app */,
-				2B2BFBAC1CF50C0D0056E480 /* MechOne OSX.app */,
-				2B2BFBC11CF50C840056E480 /* MechOne tvOS.app */,
+				2B2BFBAC1CF50C0D0056E480 /* MechOne.app */,
+				2B2BFBC11CF50C840056E480 /* MechOne.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -551,7 +551,7 @@
 			);
 			name = "MechOne OSX";
 			productName = "MechOne OSX";
-			productReference = 2B2BFBAC1CF50C0D0056E480 /* MechOne OSX.app */;
+			productReference = 2B2BFBAC1CF50C0D0056E480 /* MechOne.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2B2BFBC01CF50C840056E480 /* MechOne tvOS */ = {
@@ -568,7 +568,7 @@
 			);
 			name = "MechOne tvOS";
 			productName = "MechOne tvOS";
-			productReference = 2B2BFBC11CF50C840056E480 /* MechOne tvOS.app */;
+			productReference = 2B2BFBC11CF50C840056E480 /* MechOne.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -986,14 +986,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "MechOne OSX/MechOne OSX.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "MechOne OSX/MechOne.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "MechOne OSX/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jamesalandyer.MechOne-OSX";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MechOne;
 				PROVISIONING_PROFILE = "dbc86876-b3c7-4e64-b7ec-35b27b7d382c";
 				SDKROOT = macosx;
 			};
@@ -1003,14 +1003,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "MechOne OSX/MechOne OSX.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "MechOne OSX/MechOne.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "MechOne OSX/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jamesalandyer.MechOne-OSX";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MechOne;
 				PROVISIONING_PROFILE = "dbc86876-b3c7-4e64-b7ec-35b27b7d382c";
 				SDKROOT = macosx;
 			};
@@ -1025,7 +1025,7 @@
 				INFOPLIST_FILE = "MechOne tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamesalandyer.MechOne;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MechOne;
 				PROVISIONING_PROFILE = "1d10044c-42a6-481b-8967-2ce818e043fc";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -1042,7 +1042,7 @@
 				INFOPLIST_FILE = "MechOne tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamesalandyer.MechOne;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MechOne;
 				PROVISIONING_PROFILE = "1d10044c-42a6-481b-8967-2ce818e043fc";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2B2BFBAB1CF50C0D0056E480"
-               BuildableName = "MechOne OSX.app"
+               BuildableName = "MechOne.app"
                BlueprintName = "MechOne OSX"
                ReferencedContainer = "container:MechOne.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2B2BFBAB1CF50C0D0056E480"
-            BuildableName = "MechOne OSX.app"
+            BuildableName = "MechOne.app"
             BlueprintName = "MechOne OSX"
             ReferencedContainer = "container:MechOne.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2B2BFBAB1CF50C0D0056E480"
-            BuildableName = "MechOne OSX.app"
+            BuildableName = "MechOne.app"
             BlueprintName = "MechOne OSX"
             ReferencedContainer = "container:MechOne.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2B2BFBAB1CF50C0D0056E480"
-            BuildableName = "MechOne OSX.app"
+            BuildableName = "MechOne.app"
             BlueprintName = "MechOne OSX"
             ReferencedContainer = "container:MechOne.xcodeproj">
          </BuildableReference>

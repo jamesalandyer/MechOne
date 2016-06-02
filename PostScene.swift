@@ -134,6 +134,32 @@ class PostScreen: SKTScene {
             }
         }
     }
+    
+    #if os(OSX)
+    override func handleKeyEvent(event: NSEvent, keyDown: Bool) {
+        if let characters = event.characters {
+            for character in characters.characters {
+                switch character {
+                case " " where keyDown:
+                    if win != nil && gameWon == false {
+                        if let level = level {
+                            SKTAudio.sharedInstance().playSoundEffect("button_click.wav")
+                            let nextScene = GamePlayMode(size: self.scene!.size)
+                            nextScene.levelIndex = win! ? level + 1 : level
+                            nextScene.scaleMode = self.scaleMode
+                            self.view?.presentScene(nextScene)
+                        }
+                    }
+                    break
+                default:
+                    break
+                }
+            }
+        }
+    }
+    
+    #endif
+    
     #if !os(OSX)
     override func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
         for press in presses {

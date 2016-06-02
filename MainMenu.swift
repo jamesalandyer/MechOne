@@ -7,11 +7,11 @@
 //
 
 import SpriteKit
-#if os(OSX)
-    import AppKit
-#endif
 
 class MainMenu: SKTScene {
+    
+    //Screen
+    var fullScreen = true
     
     //Sounds
     let sndTitleSlide = SKAction.playSoundFileNamed("title.wav", waitForCompletion: false)
@@ -122,6 +122,27 @@ class MainMenu: SKTScene {
     override func stickEvent(event:String,point:CGPoint) {
         
     }
+    
+    #if os(OSX)
+    override func handleKeyEvent(event: NSEvent, keyDown: Bool) {
+        if let characters = event.characters {
+            for character in characters.characters {
+                switch character {
+                case " " where keyDown:
+                    SKTAudio.sharedInstance().playSoundEffect("button_click.wav")
+                    
+                    let nextScene = GameIntro(size: self.scene!.size)
+                    nextScene.scaleMode = self.scaleMode
+                    self.view?.presentScene(nextScene)
+                    break
+                default:
+                    break
+                }
+            }
+        }
+    }
+
+    #endif
     
     #if !os(OSX)
     override func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
