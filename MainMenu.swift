@@ -146,10 +146,18 @@ class MainMenu: SKTScene {
     
     #if !os(OSX)
     override func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
-        SKTAudio.sharedInstance().playSoundEffect("button_click.wav")
-        let nextScene = GameIntro(size: self.scene!.size)
-        nextScene.scaleMode = self.scaleMode
-        self.view?.presentScene(nextScene)
+        for press in presses {
+            switch press.type {
+            case .Select:
+                SKTAudio.sharedInstance().playSoundEffect("button_click.wav")
+                let nextScene = GameIntro(size: self.scene!.size)
+                nextScene.scaleMode = self.scaleMode
+                self.view?.presentScene(nextScene)
+                break
+            default:
+                break
+            }
+        }
     }
     #endif
 }
