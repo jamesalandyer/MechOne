@@ -12,7 +12,7 @@ import SpriteKit
 class GameViewController: UIViewController {
     
     let scene = GameScene(size: CGSize(width: 1363, height: 768))
-    var skView:SKView!
+    var skView: SKView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,15 +38,18 @@ class GameViewController: UIViewController {
         
     }
     
-    override func pressesBegan(presses: Set<UIPress>, withEvent event:
-        UIPressesEvent?) {
+     override func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
         if (skView.scene != nil) {
+            if let scene = skView.scene!.name where scene == "Menu" {
+                super.pressesBegan(presses, withEvent: event)
+            }
             skView.scene!.pressesBegan(presses, withEvent: event)
         }
-    }
-    override func pressesEnded(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
-        if skView.scene != nil {
+        
+     }
+     override func pressesEnded(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
+        if (skView.scene != nil) {
             skView.scene!.pressesEnded(presses, withEvent: event)
         }
-    }
+     }
 }

@@ -32,8 +32,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         self.skView!.showsFPS = GameSettings.Debugging.ALL_ShowFrameRate
         self.skView!.showsNodeCount = GameSettings.Debugging.ALL_ShowNodeCount
         
-        self.window.title = "MechOne"
-        
         if (GameSettings.Defaults.OSX_Start_FullScreen) {
             self.window.toggleFullScreen(nil)
         }

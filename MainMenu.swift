@@ -10,13 +10,12 @@ import SpriteKit
 
 class MainMenu: SKTScene {
     
-    //Screen
-    var fullScreen = true
-    
     //Sounds
     let sndTitleSlide = SKAction.playSoundFileNamed("title.wav", waitForCompletion: false)
     
     override func didMoveToView(view: SKView) {
+        
+        name = "Menu"
         
         let background = SKSpriteNode(imageNamed: "BG")
         background.posByCanvas(0.5, y: 0.5)
